@@ -19,22 +19,22 @@ uint16_t movingSpeed = 400;
 const uint8_t DXL_DIR_PIN = 28;
 const float DXL_PROTOCOL_VERSION = 1.0;
 
-char *joint_names[12] = {"lf_hip_to_base_link", "lf_upper_leg_to_hip", "lf_lower_leg_to_upper_leg",
-                         "rf_hip_to_base_link", "rf_upper_leg_to_hip", "rf_lower_leg_to_upper_leg",
-                         "lh_hip_to_base_link", "lh_upper_leg_to_hip", "lh_lower_leg_to_upper_leg",
-                         "rh_hip_to_base_link", "rh_upper_leg_to_hip", "rh_lower_leg_to_upper_leg"
+char *joint_names[12] = {"lf1", "lf2", "lf3",   //ending in 1 - hip connection
+                         "rf1", "rf2", "rf3",   //ending in 2 - upper leg to hip
+                         "lh1", "lh2", "lh3",   //ending in 3 - lower leg to hip  
+                         "rh1", "rh2", "rh3"
                         };
 
-const float offset[12] = {1.0472, 1.0472, 4.18879,   //radian offset from 0 servo position to 0 joint position on URDF
-                          4.18879, 4.18879, 1.0472,
-                          4.18879, 1.0472, 4.18879,
-                          1.0472, 4.18879, 1.0472
+const float offset[12] = {2.61799, 2.61799, 4.18879,   //radian offset from 0 servo position to 0 joint position on URDF
+                          2.61799, 2.61799, 1.0472,
+                          2.61799, 2.61799, 1.0472,
+                          2.61799, 2.61799, 4.18879
                          };
 
-const float orientation[12] = {1,  1,  1,
-                               1, -1, -1,
-                               1,  1,  1,
-                               1, -1, -1
+const float orientation[12] = { 1,  1,  1,
+                                1, -1, -1,
+                               -1,  1,  1,
+                               -1, -1, -1
                               };
 
 float pos[12] = {0, 0, 0,
