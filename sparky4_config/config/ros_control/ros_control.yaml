@@ -1,0 +1,34 @@
+"":
+  joint_states_controller:
+      type: joint_state_controller/JointStateController
+      publish_rate: 50
+
+  joint_group_position_controller:
+      type: effort_controllers/JointTrajectoryController
+      joints:
+          - lf1
+          - lf2
+          - lf3
+          - rf1
+          - rf2
+          - rf3
+          - lh1
+          - lh2
+          - lh3
+          - rh1
+          - rh2
+          - rh3
+
+      gains:
+        lf1 : {p: 15, d: .05, i: 0}
+        lf2 : {p: 15, d: .05, i: 0}
+        lf3 : {p: 15, d: .05, i: 0}
+        rf1 : {p: 15, d: .05, i: 0}
+        rf2 : {p: 15, d: .05, i: 0}
+        rf3 : {p: 15, d: .05, i: 0}
+        lh1 : {p: 15, d: .05, i: 0}
+        lh2 : {p: 15, d: .05, i: 0}
+        lh3 : {p: 15, d: .05, i: 0}
+        rh1 : {p: 15, d: .05, i: 0}
+        rh2 : {p: 15, d: .05, i: 0}
+        rh3 : {p: 15, d: .05, i: 0}
