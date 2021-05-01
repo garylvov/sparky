@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<robot name="sparky6" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="body_color" value="Gazebo/Silver" />
+
+<gazebo>
+  <plugin filename="libgazebo_ros_control.so" name="control"/>
+</gazebo>
+<gazebo reference="base_link">
+  <material>${body_color}</material>
+  <gravity>true</gravity>
+</gazebo>
+
+<gazebo reference="rf_hip_1">
+  <material>${body_color}</material>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="rf_upper_1">
+  <material>${body_color}</material>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="rf_lower_1">
+  <material>${body_color}</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <minDepth>0.001</minDepth>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="lf_hip_1">
+  <material>${body_color}</material>
+</gazebo>
+
+<gazebo reference="lf_upper_1">
+  <material>${body_color}</material>
+</gazebo>
+
+<gazebo reference="lf_lower_1">
+  <material>${body_color}</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <minDepth>0.001</minDepth>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="rh_hip_1">
+  <material>${body_color}</material>
+</gazebo>
+
+<gazebo reference="rh_upper_1">
+  <material>${body_color}</material>
+</gazebo>
+
+<gazebo reference="rh_lower_1">
+  <material>${body_color}</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <minDepth>0.001</minDepth>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="lh_hip_1">
+  <material>${body_color}</material>
+</gazebo>
+
+<gazebo reference="lh_upper_1">
+  <material>${body_color}</material>
+</gazebo>
+
+<gazebo reference="lh_lower_1">
+  <material>${body_color}</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <minDepth>0.001</minDepth>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+</robot>
+

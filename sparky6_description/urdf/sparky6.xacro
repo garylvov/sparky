@@ -1,0 +1,405 @@
+<?xml version="1.0" ?>
+<robot name="sparky6" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find sparky6_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find sparky6_description)/urdf/sparky6.trans" />
+<xacro:include filename="$(find sparky6_description)/urdf/sparky6.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="7.299055908234209e-06 -4.907460487480364e-05 0.008379944472130002"/>
+    <mass value="0.29530745125532065"/>
+    <inertia ixx="0.001007" ixy="1.1e-05" ixz="-1e-06" iyy="0.002439" iyz="-0.0" izz="0.003326"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rf_hip_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.020504591046096754 -0.020916720968156957 -0.035571117115763856"/>
+    <mass value="0.05388908972741452"/>
+    <inertia ixx="1.8e-05" ixy="-1e-06" ixz="-3e-06" iyy="2.3e-05" iyz="-4e-06" izz="1.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.111298 0.075143 -0.019615"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/rf_hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.111298 0.075143 -0.019615"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/rf_hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rf_upper_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.007395927338858896 0.01297355912901861 -0.03891819141199494"/>
+    <mass value="0.0527957388945323"/>
+    <inertia ixx="1.8e-05" ixy="-0.0" ixz="2e-06" iyy="2e-05" iyz="1e-06" izz="1.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.075104 0.111743 0.022385"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/rf_upper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.075104 0.111743 0.022385"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/rf_upper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rf_lower_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0007002370548039455 0.012844858668187659 -0.052271117977042425"/>
+    <mass value="0.02761962493772662"/>
+    <inertia ixx="3.2e-05" ixy="0.0" ixz="-0.0" iyy="3e-05" iyz="1e-06" izz="4e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.097604 0.11165 0.067385"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/rf_lower_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.097604 0.11165 0.067385"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/rf_lower_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lf_hip_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.020504590999523772 0.020917069609504638 -0.035571116932230584"/>
+    <mass value="0.05388908979068711"/>
+    <inertia ixx="1.8e-05" ixy="1e-06" ixz="-3e-06" iyy="2.3e-05" iyz="4e-06" izz="1.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.111298 -0.074744 -0.019615"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/lf_hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.111298 -0.074744 -0.019615"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/lf_hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lf_upper_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.007395909911934839 -0.012974204347680082 -0.03891809893494623"/>
+    <mass value="0.05279586200500898"/>
+    <inertia ixx="1.8e-05" ixy="0.0" ixz="2e-06" iyy="2e-05" iyz="-1e-06" izz="1.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.075104 -0.111345 0.022385"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/lf_upper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.075104 -0.111345 0.022385"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/lf_upper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lf_lower_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.000700770909144055 -0.01284450998542723 -0.05227111797704169"/>
+    <mass value="0.02761962493772662"/>
+    <inertia ixx="3.2e-05" ixy="0.0" ixz="0.0" iyy="3e-05" iyz="-1e-06" izz="4e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.097604 -0.111251 0.067385"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/lf_lower_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.097604 -0.111251 0.067385"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/lf_lower_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rh_hip_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.020504349543890577 -0.02091666919420533 -0.03557111693223084"/>
+    <mass value="0.05388908979068711"/>
+    <inertia ixx="1.8e-05" ixy="1e-06" ixz="3e-06" iyy="2.3e-05" iyz="-4e-06" izz="1.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.109652 0.07416 -0.019615"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/rh_hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.109652 0.07416 -0.019615"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/rh_hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rh_upper_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.007395151367566591 0.012973604762980623 -0.03891809893494652"/>
+    <mass value="0.05279586200500898"/>
+    <inertia ixx="1.8e-05" ixy="0.0" ixz="-2e-06" iyy="2e-05" iyz="1e-06" izz="1.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.073459 0.11076 0.022385"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/rh_upper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.073459 0.11076 0.022385"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/rh_upper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rh_lower_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0007000123647771528 0.012844910400728604 -0.05227111797704198"/>
+    <mass value="0.02761962493772662"/>
+    <inertia ixx="3.2e-05" ixy="0.0" ixz="-0.0" iyy="3e-05" iyz="1e-06" izz="4e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.095959 0.110667 0.067385"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/rh_lower_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.095959 0.110667 0.067385"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/rh_lower_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lh_hip_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.020504324900517096 0.020916111095980364 -0.03557111711576425"/>
+    <mass value="0.05388908972741452"/>
+    <inertia ixx="1.8e-05" ixy="-1e-06" ixz="3e-06" iyy="2.3e-05" iyz="4e-06" izz="1.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.111992 -0.074753 -0.019615"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/lh_hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.111992 -0.074753 -0.019615"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/lh_hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lh_upper_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.007395193484439774 -0.01297416900119433 -0.03891819141199544"/>
+    <mass value="0.0527957388945323"/>
+    <inertia ixx="1.8e-05" ixy="-0.0" ixz="-2e-06" iyy="2e-05" iyz="-1e-06" izz="1.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.075799 -0.111353 0.022385"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/lh_upper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.075799 -0.111353 0.022385"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/lh_upper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lh_lower_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0007009709092222066 -0.012844468540364029 -0.052271117977042175"/>
+    <mass value="0.02761962493772662"/>
+    <inertia ixx="3.2e-05" ixy="0.0" ixz="0.0" iyy="3e-05" iyz="-1e-06" izz="4e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.098299 -0.111259 0.067385"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/lh_lower_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.098299 -0.111259 0.067385"/>
+    <geometry>
+      <mesh filename="package://sparky6_description/meshes/lh_lower_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="rf1" type="revolute">
+  <origin rpy="0 0 0" xyz="0.111298 -0.075143 0.019615"/>
+  <parent link="base_link"/>
+  <child link="rf_hip_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+  <limit effort="5" lower="-3.14159265359" upper="3.14159265359" velocity="5"/>
+</joint>
+
+<joint name="rf2" type="revolute">
+  <origin rpy="0 0 0" xyz="-0.036194 -0.0366 -0.042"/>
+  <parent link="rf_hip_1"/>
+  <child link="rf_upper_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+  <limit effort="5" lower="-3.14159265359" upper="3.14159265359" velocity="5"/>
+</joint>
+
+<joint name="rf3" type="revolute">
+  <origin rpy="0 0 0" xyz="0.0225 9.3e-05 -0.045"/>
+  <parent link="rf_upper_1"/>
+  <child link="rf_lower_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+  <limit effort="5" lower="-3.14159265359" upper="3.14159265359" velocity="5"/>
+</joint>
+
+<joint name="lf1" type="revolute">
+  <origin rpy="0 0 0" xyz="0.111298 0.074744 0.019615"/>
+  <parent link="base_link"/>
+  <child link="lf_hip_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+  <limit effort="5" lower="-3.14159265359" upper="3.14159265359" velocity="5"/>
+</joint>
+
+<joint name="lf2" type="revolute">
+  <origin rpy="0 0 0" xyz="-0.036194 0.036601 -0.042"/>
+  <parent link="lf_hip_1"/>
+  <child link="lf_upper_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+  <limit effort="5" lower="-3.14159265359" upper="3.14159265359" velocity="5"/>
+</joint>
+
+<joint name="lf3" type="revolute">
+  <origin rpy="0 0 0" xyz="0.0225 -9.4e-05 -0.045"/>
+  <parent link="lf_upper_1"/>
+  <child link="lf_lower_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+  <limit effort="5" lower="-3.14159265359" upper="3.14159265359" velocity="5"/>
+</joint>
+
+<joint name="rh1" type="revolute">
+  <origin rpy="0 0 0" xyz="-0.109652 -0.07416 0.019615"/>
+  <parent link="base_link"/>
+  <child link="rh_hip_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+  <limit effort="5" lower="-3.14159265359" upper="3.14159265359" velocity="5"/>
+</joint>
+
+<joint name="rh2" type="revolute">
+  <origin rpy="0 0 0" xyz="0.036193 -0.0366 -0.042"/>
+  <parent link="rh_hip_1"/>
+  <child link="rh_upper_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+  <limit effort="5" lower="-3.14159265359" upper="3.14159265359" velocity="5"/>
+</joint>
+
+<joint name="rh3" type="revolute">
+  <origin rpy="0 0 0" xyz="-0.0225 9.3e-05 -0.045"/>
+  <parent link="rh_upper_1"/>
+  <child link="rh_lower_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+  <limit effort="5" lower="-3.14159265359" upper="3.14159265359" velocity="5"/>
+</joint>
+
+<joint name="lh1" type="revolute">
+  <origin rpy="0 0 0" xyz="-0.111992 0.074753 0.019615"/>
+  <parent link="base_link"/>
+  <child link="lh_hip_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit effort="5" lower="-3.14159265359" upper="3.14159265359" velocity="5"/>
+</joint>
+
+<joint name="lh2" type="revolute">
+  <origin rpy="0 0 0" xyz="0.036193 0.0366 -0.042"/>
+  <parent link="lh_hip_1"/>
+  <child link="lh_upper_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+  <limit effort="5" lower="-3.14159265359" upper="3.14159265359" velocity="5"/>
+</joint>
+
+<joint name="lh3" type="revolute">
+  <origin rpy="0 0 0" xyz="-0.0225 -9.4e-05 -0.045"/>
+  <parent link="lh_upper_1"/>
+  <child link="lh_lower_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+  <limit effort="5" lower="-3.14159265359" upper="3.14159265359" velocity="5"/>
+</joint>
+
+<!--feet tf for champ quadruped setup-->
+  <link name="rf_foot"/>
+  <joint name="rf_foot_to_lower_leg" type="fixed">
+    <parent link="rf_lower_1"/>
+    <child link="rf_foot"/>
+    <origin rpy="0 0 0" xyz="0 .014 -.1025"/>
+  </joint>
+
+  <link name="lf_foot"/>
+  <joint name="lf_foot_to_lower_leg" type="fixed">
+    <parent link="lf_lower_1"/>
+    <child link="lf_foot"/>
+    <origin rpy="0 0 0" xyz="0 -.014 -.1025"/>
+  </joint>
+
+  <link name="rh_foot"/>
+  <joint name="rh_foot_to_lower_leg" type="fixed">
+    <parent link="rh_lower_1"/>
+    <child link="rh_foot"/>
+    <origin rpy="0 0 0" xyz="0 .014 -.1025"/>
+  </joint>
+
+  <link name="lh_foot"/>
+  <joint name="lh_foot_to_lower_leg" type="fixed">
+    <parent link="lh_lower_1"/>
+    <child link="lh_foot"/>
+    <origin rpy="0 0 0" xyz="0 -.014 -.1025"/>
+  </joint>
+
+</robot>

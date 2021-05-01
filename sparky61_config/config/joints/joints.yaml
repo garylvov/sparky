@@ -1,0 +1,23 @@
+left_front:
+  - lf1
+  - lf2
+  - lf3
+  - lf_foot_to_lower_leg
+
+right_front:
+  - rf1
+  - rf2
+  - rf3
+  - rf_foot_to_lower_leg
+
+left_hind:
+  - lh1
+  - lh2
+  - lh3
+  - lh_foot_to_lower_leg
+
+right_hind:
+  - rh1
+  - rh2
+  - rh3
+  - rh_foot_to_lower_leg
