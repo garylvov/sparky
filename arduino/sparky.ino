@@ -38,7 +38,7 @@ char *joint_names[12] = {"lf1", "lf2", "lf3",   //ending in 1 - hip connection
                          "rh1", "rh2", "rh3"
                         };
 
-float offset[12] = {151.50,  58.36, 238.71,    //radian offset from 0 servo position on servo to 0 joint position on URDF
+float offset[12] = {151.50,  58.36, 238.71,    //deg offset from 0 servo position on servo to 0 joint position on URDF
                     147.21, 238.42,  59.53,
                     147.50, 236.66,  59.53,
                     149.50,  59.82,  238.12
