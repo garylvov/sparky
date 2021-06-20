@@ -1,6 +1,6 @@
 ## https://www.garylvov.com/sparky
 
-Utilizes the CHAMP open source framework for quadrupeds. Only tested on Melodic (Ubuntu 18.04 Bionic)
+Utilizes the CHAMP open source framework for quadrupeds. Only tested on ROS Melodic (Ubuntu 18.04 Bionic)
 
 https://github.com/chvmp/champ
 
